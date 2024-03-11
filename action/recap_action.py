@@ -1,5 +1,5 @@
 from datetime import timedelta, datetime
-from random import random
+from random import random, shuffle
 
 from action import Action
 
@@ -22,6 +22,7 @@ class RecapAction(Action):
         recap_count = 0
         correct_count = 0
         next_recap_time = None
+        shuffle(self.database.words)
         for word in self.database.words:
             recap_threshold = word.get_recapped_date() + recap_duration(
                 word.recap_count
