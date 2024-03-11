@@ -8,9 +8,10 @@ class Word:
     meaning: str
     added_date: float
     recapped_date: float = 0.0
+    recap_count: int = 0
 
     def get_added_date(self) -> datetime:
         return datetime.fromtimestamp(self.added_date)
 
-    def get_recappted_date(self) -> datetime:
+    def get_recapped_date(self) -> datetime:
         return datetime.fromtimestamp(self.recapped_date)
