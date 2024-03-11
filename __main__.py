@@ -1,6 +1,6 @@
 from database import Database
 
-from action import QuitAction, WordAppendAction, RecapAction
+from action import QuitAction, WordAppendAction, RecapAction, DictionaryAction
 
 
 class Frame:
@@ -13,6 +13,7 @@ class Frame:
         self.actions.append(QuitAction(self.quit))
         self.actions.append(WordAppendAction(self.database))
         self.actions.append(RecapAction(self.database))
+        self.actions.append(DictionaryAction(self.database))
 
     def tick(self):
         # -- print title page
