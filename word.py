@@ -10,6 +10,9 @@ class Word:
     recapped_date: float = 0.0
     recap_count: int = 0
 
+    def __str__(self) -> str:
+        return f"- {self.word}: {self.meaning}"
+
     def get_added_date(self) -> datetime:
         return datetime.fromtimestamp(self.added_date)
 
